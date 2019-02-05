@@ -15,6 +15,16 @@ public class User {
     @UserColumns()
     private LocalDate dateOfBirth;
 
+    public User() {
+    }
+    public User(int id, String firstName, String lastName, double salary, LocalDate dateOfBirth) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.dateOfBirth = dateOfBirth;
+    }
+
     public int getId() {
         return id;
     }
