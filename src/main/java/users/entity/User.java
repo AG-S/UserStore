@@ -2,17 +2,11 @@ package users.entity;
 
 import java.time.LocalDate;
 
-@UserTable(name = "users", countFields = 5)
 public class User {
-    @UserColumns (pk = true)
     private int id;
-    @UserColumns ()
     private String firstName;
-    @UserColumns()
     private String lastName;
-    @UserColumns()
     private double salary;
-    @UserColumns()
     private LocalDate dateOfBirth;
 
     public User() {

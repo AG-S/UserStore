@@ -20,6 +20,7 @@
         <th scope="col">firstName</th>
         <th scope="col">lastName</th>
         <th scope="col">salary</th>
+        <th scope="col">dateOfBirth</th>
     </tr>
     </thead>
     <tbody>
@@ -29,9 +30,26 @@
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.salary}</td>
+        <td>${user.dateOfBirth}</td>
+        <td>
+            <form action="/users/update" method="GET">
+                <button type="submit" class="btn btn-primary mb-e">Edit</button>
+                <input type="hidden" name="id" value="${user.id}">
+            </form>
+        </td>
+        <td>
+            <form action="/users/delete" method="POST">
+            <button type="submit" class="btn btn-primary mb-d">Delete</button>
+            <input type="hidden" name="id" value="${user.id}">
+            </form>
+        </td>
     </tr>
     </#list>
-
+    <td>
+        <form action="/users/add" method="GET">
+            <button type="submit" class="btn btn-primary mb-e">Add</button>
+        </form>
+    </td>
     </tbody>
 </table>
 

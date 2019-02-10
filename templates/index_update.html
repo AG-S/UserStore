@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Add User</title>
+</head>
+<body>
+<form action="/users/update"  method="POST">
+    <div class="form-row">
+        <div class="col">
+            <input type="hidden" name="id" value="${user.id}">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name" id="inputFirstName" required name="firstName" value="${user.firstName}">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" id="inputLastName" required name="lastName" value="${user.lastName}">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Salary" id="inputSalary" step=".01" min="0" name="salary" value="${user.salary}">
+        </div>
+        <div class="col">
+            <input type="date" class="form-control" placeholder="date of birth" id="inputDateOfBirth" required name="dateOfBirth" value="${user.dateOfBirth}">
+        </div>
+        <input type="submit" class="btn btn-dark" value="Save">
+    </div>
+</form>
+</body>
+</html>

@@ -18,4 +18,27 @@ public class UserService implements IUserService {
     public List<User> getAll() {
         return userDao.getAll();
     }
+
+    @Override
+    public User findById(int id) {
+        return userDao.getById(id);
+    }
+
+    @Override
+    public void insert(User user) {
+        userDao.insert(user);
+
+    }
+
+    @Override
+    public void deleteById(int id) {
+        userDao.delete(id);
+
+    }
+
+    @Override
+    public void update(User user) {
+        userDao.update(user);
+
+    }
 }

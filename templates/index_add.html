@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Add User</title>
+</head>
+<body>
+<form action="/users/add"  method="POST">
+    <div class="form-row">
+        <div class="col">
+             <input type="text" class="form-control" placeholder="Id"  id="inputId" required name="Id">
+        </div>
+        <div class="col">
+             <input type="text" class="form-control" placeholder="First name" id="inputFirstName" required name="firstName">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" id="inputLastName" required name="lastName">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Salary" id="inputSalary" step=".01" min="0" value="0" name="salary">
+        </div>
+        <div class="col">
+            <input type="date" class="form-control" placeholder="date of birth" id="inputDateOfBirth" required name="dateOfBirth">
+        </div>
+    </div>
+    <input type="submit" class="btn btn-dark" value="Add">
+</form>
+</body>
+</html>
